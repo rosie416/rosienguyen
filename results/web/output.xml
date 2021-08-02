@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.5 on win32)" generated="20210801 22:45:13.410" rpa="false" schemaversion="2">
+<suite id="s1" name="Registration Functional" source="D:\RobotFramework\Central\rosie_powerbuy\testcases\web\registration_functional.robot">
+<test id="s1-t1" name="TC01: Registration success">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>common_keywords.Open</arg>
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>home_page.Go to Registration page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open" library="common_keywords">
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210801 22:45:14.784" level="INFO">Opening browser 'chrome' to base url 'https://www.powerbuy.co.th/en'.</msg>
+<status status="PASS" starttime="20210801 22:45:14.784" endtime="20210801 22:45:30.487"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210801 22:45:30.487" endtime="20210801 22:45:30.910"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:14.784" endtime="20210801 22:45:30.910"/>
+</kw>
+<kw name="Go to Registration page" library="home_page">
+<kw name="Click Element" library="common_keywords">
+<arg>${homePage}[lnkRegister]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:30.914" endtime="20210801 22:45:31.007"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:31.008" level="INFO">Clicking element '//a[@id='lnk-register-desktop']'.</msg>
+<status status="PASS" starttime="20210801 22:45:31.008" endtime="20210801 22:45:31.648"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:30.911" endtime="20210801 22:45:31.648"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:30.911" endtime="20210801 22:45:31.649"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:14.783" endtime="20210801 22:45:31.649"/>
+</kw>
+<kw name="Generate a random Interger" library="registration_page">
+<kw name="Evaluate" library="BuiltIn">
+<var>${randomNumber}</var>
+<arg>random.randint(1, 1000000)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20210801 22:45:31.653" level="INFO">${randomNumber} = 236728</msg>
+<status status="PASS" starttime="20210801 22:45:31.652" endtime="20210801 22:45:31.653"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${randomNumber}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210801 22:45:31.654" level="INFO">${randomNumber} = 236728</msg>
+<status status="PASS" starttime="20210801 22:45:31.653" endtime="20210801 22:45:31.654"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:31.652" endtime="20210801 22:45:31.654"/>
+</kw>
+<kw name="Input First Name" library="registration_page">
+<arg>${registrationPageLocator}[txtFirstName]</arg>
+<arg>${user}[fistName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${firstName}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:45:31.656" level="INFO">${firstName} = Rosie236728</msg>
+<status status="PASS" starttime="20210801 22:45:31.656" endtime="20210801 22:45:31.656"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${firstName}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210801 22:45:31.656" level="INFO">${firstName} = Rosie236728</msg>
+<status status="PASS" starttime="20210801 22:45:31.656" endtime="20210801 22:45:31.656"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${firstName}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:31.660" endtime="20210801 22:45:32.158"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:32.159" level="INFO">Typing text 'Rosie236728' into text field '//input[@name='firstname']'.</msg>
+<status status="PASS" starttime="20210801 22:45:32.159" endtime="20210801 22:45:32.897"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:31.656" endtime="20210801 22:45:32.897"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:31.655" endtime="20210801 22:45:32.897"/>
+</kw>
+<kw name="Input Last Name" library="registration_page">
+<arg>${registrationPageLocator}[txtLastName]</arg>
+<arg>${user}[lastName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:45:32.905" level="INFO">${input} = Nguyen236728</msg>
+<status status="PASS" starttime="20210801 22:45:32.905" endtime="20210801 22:45:32.905"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:32.906" endtime="20210801 22:45:33.021"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:33.022" level="INFO">Typing text 'Nguyen236728' into text field '//input[@name='lastname']'.</msg>
+<status status="PASS" starttime="20210801 22:45:33.021" endtime="20210801 22:45:33.757"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:32.906" endtime="20210801 22:45:33.757"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:32.903" endtime="20210801 22:45:33.757"/>
+</kw>
+<kw name="Input Email" library="registration_page">
+<arg>${registrationPageLocator}[txtEmail]</arg>
+<arg>${user}[emailUser]</arg>
+<arg>${user}[emailDomain]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${name}</arg>
+<arg>${randomNumber}</arg>
+<arg>${domain}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:45:33.760" level="INFO">${input} = rosienguyen236728@gmail.com</msg>
+<status status="PASS" starttime="20210801 22:45:33.759" endtime="20210801 22:45:33.760"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:33.761" endtime="20210801 22:45:33.858"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:33.860" level="INFO">Typing text 'rosienguyen236728@gmail.com' into text field '//input[@id='txt-reg-emailOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:45:33.859" endtime="20210801 22:45:35.411"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:33.760" endtime="20210801 22:45:35.412"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:33.758" endtime="20210801 22:45:35.412"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:35.417" endtime="20210801 22:45:35.452"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:35.453" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210801 22:45:35.452" endtime="20210801 22:45:35.775"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:35.417" endtime="20210801 22:45:35.775"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtConfirmationPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:35.777" endtime="20210801 22:45:35.803"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:35.803" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password_confirmation']'.</msg>
+<status status="PASS" starttime="20210801 22:45:35.803" endtime="20210801 22:45:36.079"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:35.776" endtime="20210801 22:45:36.079"/>
+</kw>
+<kw name="Click Element" library="common_keywords">
+<arg>${registrationPageLocator}[ckbConsentForMarketing]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:36.080" endtime="20210801 22:45:36.109"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:36.109" level="INFO">Clicking element '//label[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20210801 22:45:36.109" endtime="20210801 22:45:36.219"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:36.080" endtime="20210801 22:45:36.219"/>
+</kw>
+<kw name="Click Button" library="common_keywords">
+<arg>${registrationPageLocator}[btnSubmit]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:45:36.221" endtime="20210801 22:45:36.258"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210801 22:45:36.259" level="INFO">Clicking button '//button[@id='btn-reg-submitOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:45:36.258" endtime="20210801 22:45:36.447"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:36.219" endtime="20210801 22:45:36.447"/>
+</kw>
+<kw name="Verify Register Successfully" library="registration_page">
+<kw name="Wait For Location" library="common_keywords">
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>120</arg>
+<kw name="Wait Until Location Is" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20210801 22:45:36.457" endtime="20210801 22:46:49.943"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:36.456" endtime="20210801 22:46:49.944"/>
+</kw>
+<kw name="Verify Page Contain Element" library="common_keywords">
+<arg>${homePage}[hrefAccount]</arg>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210801 22:46:50.064" level="INFO">Current page contains element '//a[@id='btn-open-loginPopup']'.</msg>
+<status status="PASS" starttime="20210801 22:46:49.947" endtime="20210801 22:46:50.064"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:49.945" endtime="20210801 22:46:50.064"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>${firstName}</arg>
+<arg>${confirmation}[account]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:46:50.067" level="INFO">${input} = Rosie236728 Account</msg>
+<status status="PASS" starttime="20210801 22:46:50.065" endtime="20210801 22:46:50.068"/>
+</kw>
+<kw name="Verify Element Text" library="common_keywords">
+<arg>${homePage}[hrefAccount]</arg>
+<arg>${input}</arg>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210801 22:46:50.071" level="INFO">Verifying element '//a[@id='btn-open-loginPopup']' contains exact text 'Rosie236728 Account'.</msg>
+<status status="PASS" starttime="20210801 22:46:50.070" endtime="20210801 22:46:50.119"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:50.068" endtime="20210801 22:46:50.119"/>
+</kw>
+<kw name="Verify Page Contain Element" library="common_keywords">
+<arg>${homePage}[hrefLogout]</arg>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210801 22:46:50.145" level="INFO">Current page contains element '//a[@id='lnk-register-desktop']'.</msg>
+<status status="PASS" starttime="20210801 22:46:50.119" endtime="20210801 22:46:50.146"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:50.119" endtime="20210801 22:46:50.146"/>
+</kw>
+<kw name="Verify Element Text" library="common_keywords">
+<arg>${homePage}[hrefLogout]</arg>
+<arg>${confirmation}[logout]</arg>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210801 22:46:50.147" level="INFO">Verifying element '//a[@id='lnk-register-desktop']' contains exact text 'Logout'.</msg>
+<status status="PASS" starttime="20210801 22:46:50.147" endtime="20210801 22:46:50.641"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:50.146" endtime="20210801 22:46:50.642"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:36.455" endtime="20210801 22:46:50.643"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210801 22:46:50.644" endtime="20210801 22:46:52.990"/>
+</kw>
+<status status="PASS" starttime="20210801 22:45:14.783" endtime="20210801 22:46:52.992"/>
+</test>
+<test id="s1-t2" name="TC02: Registration failed with existed email">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>common_keywords.Open</arg>
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>home_page.Go to Registration page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open" library="common_keywords">
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210801 22:46:53.011" level="INFO">Opening browser 'chrome' to base url 'https://www.powerbuy.co.th/en'.</msg>
+<status status="PASS" starttime="20210801 22:46:53.007" endtime="20210801 22:47:07.815"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210801 22:47:07.815" endtime="20210801 22:47:08.548"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:53.001" endtime="20210801 22:47:08.549"/>
+</kw>
+<kw name="Go to Registration page" library="home_page">
+<kw name="Click Element" library="common_keywords">
+<arg>${homePage}[lnkRegister]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:08.552" endtime="20210801 22:47:08.687"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:08.688" level="INFO">Clicking element '//a[@id='lnk-register-desktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:08.688" endtime="20210801 22:47:09.467"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:08.550" endtime="20210801 22:47:09.467"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:08.549" endtime="20210801 22:47:09.468"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:53.001" endtime="20210801 22:47:09.468"/>
+</kw>
+<kw name="Input First Name" library="registration_page">
+<arg>${registrationPageLocator}[txtFirstName]</arg>
+<arg>${user}[fistName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${firstName}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:09.470" level="INFO">${firstName} = Rosie236728</msg>
+<status status="PASS" starttime="20210801 22:47:09.469" endtime="20210801 22:47:09.470"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${firstName}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210801 22:47:09.471" level="INFO">${firstName} = Rosie236728</msg>
+<status status="PASS" starttime="20210801 22:47:09.471" endtime="20210801 22:47:09.472"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${firstName}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:09.474" endtime="20210801 22:47:11.382"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:11.384" level="INFO">Typing text 'Rosie236728' into text field '//input[@name='firstname']'.</msg>
+<status status="PASS" starttime="20210801 22:47:11.383" endtime="20210801 22:47:11.728"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:09.472" endtime="20210801 22:47:11.729"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:09.468" endtime="20210801 22:47:11.729"/>
+</kw>
+<kw name="Input Last Name" library="registration_page">
+<arg>${registrationPageLocator}[txtLastName]</arg>
+<arg>${user}[lastName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:11.730" level="INFO">${input} = Nguyen236728</msg>
+<status status="PASS" starttime="20210801 22:47:11.730" endtime="20210801 22:47:11.731"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:11.731" endtime="20210801 22:47:11.761"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:11.761" level="INFO">Typing text 'Nguyen236728' into text field '//input[@name='lastname']'.</msg>
+<status status="PASS" starttime="20210801 22:47:11.761" endtime="20210801 22:47:12.108"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:11.731" endtime="20210801 22:47:12.108"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:11.729" endtime="20210801 22:47:12.108"/>
+</kw>
+<kw name="Input Email" library="registration_page">
+<arg>${registrationPageLocator}[txtEmail]</arg>
+<arg>${user}[emailUser]</arg>
+<arg>${user}[emailDomain]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${name}</arg>
+<arg>${randomNumber}</arg>
+<arg>${domain}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:12.111" level="INFO">${input} = rosienguyen236728@gmail.com</msg>
+<status status="PASS" starttime="20210801 22:47:12.111" endtime="20210801 22:47:12.111"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:12.112" endtime="20210801 22:47:12.143"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:12.143" level="INFO">Typing text 'rosienguyen236728@gmail.com' into text field '//input[@id='txt-reg-emailOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:12.143" endtime="20210801 22:47:12.820"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:12.112" endtime="20210801 22:47:12.820"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:12.109" endtime="20210801 22:47:12.821"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:12.823" endtime="20210801 22:47:12.870"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:12.871" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210801 22:47:12.870" endtime="20210801 22:47:13.179"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:12.822" endtime="20210801 22:47:13.179"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtConfirmationPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:13.181" endtime="20210801 22:47:13.209"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:13.209" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password_confirmation']'.</msg>
+<status status="PASS" starttime="20210801 22:47:13.209" endtime="20210801 22:47:13.488"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:13.180" endtime="20210801 22:47:13.488"/>
+</kw>
+<kw name="Click Element" library="common_keywords">
+<arg>${registrationPageLocator}[ckbConsentForMarketing]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:13.491" endtime="20210801 22:47:13.518"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:13.518" level="INFO">Clicking element '//label[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20210801 22:47:13.518" endtime="20210801 22:47:13.628"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:13.490" endtime="20210801 22:47:13.629"/>
+</kw>
+<kw name="Click Button" library="common_keywords">
+<arg>${registrationPageLocator}[btnSubmit]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:13.630" endtime="20210801 22:47:13.701"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:13.702" level="INFO">Clicking button '//button[@id='btn-reg-submitOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:13.702" endtime="20210801 22:47:13.891"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:13.629" endtime="20210801 22:47:13.891"/>
+</kw>
+<kw name="Verify Error Message" library="registration_page">
+<arg>${registrationPageLocator}[lblNotificationErr]</arg>
+<arg>${error}[errCanNotCreateAccount]</arg>
+<kw name="Verify Element is Visible" library="common_keywords">
+<arg>${locator}</arg>
+<arg>120</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:13.897" endtime="20210801 22:47:18.210"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210801 22:47:18.276" level="INFO">Element '//div[@type='danger']//span' is displayed.</msg>
+<status status="PASS" starttime="20210801 22:47:18.211" endtime="20210801 22:47:18.276"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:13.897" endtime="20210801 22:47:18.276"/>
+</kw>
+<kw name="Verify Element Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${error}</arg>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210801 22:47:18.278" level="INFO">Verifying element '//div[@type='danger']//span' contains exact text 'Can not create account please try again later.'.</msg>
+<status status="PASS" starttime="20210801 22:47:18.278" endtime="20210801 22:47:18.308"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:18.277" endtime="20210801 22:47:18.308"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:13.895" endtime="20210801 22:47:18.308"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210801 22:47:18.309" endtime="20210801 22:47:20.658"/>
+</kw>
+<status status="PASS" starttime="20210801 22:46:52.997" endtime="20210801 22:47:20.660"/>
+</test>
+<test id="s1-t3" name="TC03: Registration failed with empty first name">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>common_keywords.Open</arg>
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>home_page.Go to Registration page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open" library="common_keywords">
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210801 22:47:20.679" level="INFO">Opening browser 'chrome' to base url 'https://www.powerbuy.co.th/en'.</msg>
+<status status="PASS" starttime="20210801 22:47:20.678" endtime="20210801 22:47:31.324"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210801 22:47:31.325" endtime="20210801 22:47:31.873"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:20.674" endtime="20210801 22:47:31.873"/>
+</kw>
+<kw name="Go to Registration page" library="home_page">
+<kw name="Click Element" library="common_keywords">
+<arg>${homePage}[lnkRegister]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:31.877" endtime="20210801 22:47:32.249"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:32.250" level="INFO">Clicking element '//a[@id='lnk-register-desktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:32.249" endtime="20210801 22:47:33.654"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:31.875" endtime="20210801 22:47:33.654"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:31.874" endtime="20210801 22:47:33.654"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:20.671" endtime="20210801 22:47:33.654"/>
+</kw>
+<kw name="Input Last Name" library="registration_page">
+<arg>${registrationPageLocator}[txtLastName]</arg>
+<arg>${user}[lastName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:33.661" level="INFO">${input} = Nguyen236728</msg>
+<status status="PASS" starttime="20210801 22:47:33.660" endtime="20210801 22:47:33.661"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:33.663" endtime="20210801 22:47:35.214"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:35.215" level="INFO">Typing text 'Nguyen236728' into text field '//input[@name='lastname']'.</msg>
+<status status="PASS" starttime="20210801 22:47:35.214" endtime="20210801 22:47:35.727"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:33.661" endtime="20210801 22:47:35.728"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:33.658" endtime="20210801 22:47:35.728"/>
+</kw>
+<kw name="Input Email" library="registration_page">
+<arg>${registrationPageLocator}[txtEmail]</arg>
+<arg>${user}[emailUser]</arg>
+<arg>${user}[emailDomain]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${name}</arg>
+<arg>${randomNumber}</arg>
+<arg>${domain}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:35.733" level="INFO">${input} = rosienguyen236728@gmail.com</msg>
+<status status="PASS" starttime="20210801 22:47:35.732" endtime="20210801 22:47:35.733"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:35.735" endtime="20210801 22:47:35.847"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:35.848" level="INFO">Typing text 'rosienguyen236728@gmail.com' into text field '//input[@id='txt-reg-emailOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:35.848" endtime="20210801 22:47:36.873"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:35.733" endtime="20210801 22:47:36.874"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:35.730" endtime="20210801 22:47:36.874"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:36.881" endtime="20210801 22:47:36.966"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:36.967" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210801 22:47:36.966" endtime="20210801 22:47:37.426"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:36.880" endtime="20210801 22:47:37.427"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtConfirmationPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:37.428" endtime="20210801 22:47:37.465"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:37.466" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password_confirmation']'.</msg>
+<status status="PASS" starttime="20210801 22:47:37.465" endtime="20210801 22:47:37.783"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:37.427" endtime="20210801 22:47:37.786"/>
+</kw>
+<kw name="Click Button" library="common_keywords">
+<arg>${registrationPageLocator}[btnSubmit]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:37.789" endtime="20210801 22:47:37.831"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:37.832" level="INFO">Clicking button '//button[@id='btn-reg-submitOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:37.831" endtime="20210801 22:47:38.048"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:37.788" endtime="20210801 22:47:38.048"/>
+</kw>
+<kw name="Verify Error Message" library="registration_page">
+<arg>${registrationPageLocator}[lblErrFirstName]</arg>
+<arg>${error}[errEmpty]</arg>
+<kw name="Verify Element is Visible" library="common_keywords">
+<arg>${locator}</arg>
+<arg>120</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:38.059" endtime="20210801 22:47:38.190"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210801 22:47:38.213" level="INFO">Element '//input[@name='firstname']/..//span[@color='danger']' is displayed.</msg>
+<status status="PASS" starttime="20210801 22:47:38.190" endtime="20210801 22:47:38.213"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:38.058" endtime="20210801 22:47:38.213"/>
+</kw>
+<kw name="Verify Element Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${error}</arg>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210801 22:47:38.215" level="INFO">Verifying element '//input[@name='firstname']/..//span[@color='danger']' contains exact text 'This is a required field.'.</msg>
+<status status="PASS" starttime="20210801 22:47:38.214" endtime="20210801 22:47:38.248"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:38.213" endtime="20210801 22:47:38.248"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:38.057" endtime="20210801 22:47:38.248"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210801 22:47:38.250" endtime="20210801 22:47:40.595"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:20.666" endtime="20210801 22:47:40.598"/>
+</test>
+<test id="s1-t4" name="TC04: Registration failed with invalid email">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>common_keywords.Open</arg>
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<arg>AND</arg>
+<arg>home_page.Go to Registration page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open" library="common_keywords">
+<arg>${powerbuy}[homePageUrl]</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210801 22:47:40.615" level="INFO">Opening browser 'chrome' to base url 'https://www.powerbuy.co.th/en'.</msg>
+<status status="PASS" starttime="20210801 22:47:40.614" endtime="20210801 22:47:49.183"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210801 22:47:49.183" endtime="20210801 22:47:49.680"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:40.609" endtime="20210801 22:47:49.681"/>
+</kw>
+<kw name="Go to Registration page" library="home_page">
+<kw name="Click Element" library="common_keywords">
+<arg>${homePage}[lnkRegister]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:49.687" endtime="20210801 22:47:49.760"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:49.761" level="INFO">Clicking element '//a[@id='lnk-register-desktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:49.760" endtime="20210801 22:47:50.164"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:49.686" endtime="20210801 22:47:50.164"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:49.683" endtime="20210801 22:47:50.164"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:40.607" endtime="20210801 22:47:50.164"/>
+</kw>
+<kw name="Input First Name" library="registration_page">
+<arg>${registrationPageLocator}[txtFirstName]</arg>
+<arg>${user}[fistName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${firstName}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:50.180" level="INFO">${firstName} = Rosie236728</msg>
+<status status="PASS" starttime="20210801 22:47:50.180" endtime="20210801 22:47:50.180"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${firstName}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210801 22:47:50.182" level="INFO">${firstName} = Rosie236728</msg>
+<status status="PASS" starttime="20210801 22:47:50.181" endtime="20210801 22:47:50.182"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${firstName}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:50.184" endtime="20210801 22:47:50.763"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:50.763" level="INFO">Typing text 'Rosie236728' into text field '//input[@name='firstname']'.</msg>
+<status status="PASS" starttime="20210801 22:47:50.763" endtime="20210801 22:47:51.443"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:50.183" endtime="20210801 22:47:51.443"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:50.178" endtime="20210801 22:47:51.443"/>
+</kw>
+<kw name="Input Last Name" library="registration_page">
+<arg>${registrationPageLocator}[txtLastName]</arg>
+<arg>${user}[lastName]</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${input}</var>
+<arg>SEPARATOR=</arg>
+<arg>${value}</arg>
+<arg>${randomNumber}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210801 22:47:51.445" level="INFO">${input} = Nguyen236728</msg>
+<status status="PASS" starttime="20210801 22:47:51.445" endtime="20210801 22:47:51.445"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${input}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:51.445" endtime="20210801 22:47:51.635"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:51.636" level="INFO">Typing text 'Nguyen236728' into text field '//input[@name='lastname']'.</msg>
+<status status="PASS" starttime="20210801 22:47:51.635" endtime="20210801 22:47:52.435"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:51.445" endtime="20210801 22:47:52.435"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:51.444" endtime="20210801 22:47:52.435"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtEmail]</arg>
+<arg>${user}[emailUser]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:52.461" endtime="20210801 22:47:52.533"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:52.534" level="INFO">Typing text 'rosienguyen' into text field '//input[@id='txt-reg-emailOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:52.533" endtime="20210801 22:47:53.642"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:52.457" endtime="20210801 22:47:53.642"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:53.643" endtime="20210801 22:47:53.675"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:53.676" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210801 22:47:53.675" endtime="20210801 22:47:54.093"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:53.643" endtime="20210801 22:47:54.093"/>
+</kw>
+<kw name="Input Text" library="common_keywords">
+<arg>${registrationPageLocator}[txtConfirmationPassword]</arg>
+<arg>${user}[password]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:54.096" endtime="20210801 22:47:54.141"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:54.141" level="INFO">Typing text 'Rosie000' into text field '//input[@name='password_confirmation']'.</msg>
+<status status="PASS" starttime="20210801 22:47:54.141" endtime="20210801 22:47:54.474"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:54.094" endtime="20210801 22:47:54.474"/>
+</kw>
+<kw name="Click Button" library="common_keywords">
+<arg>${registrationPageLocator}[btnSubmit]</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:54.479" endtime="20210801 22:47:54.514"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210801 22:47:54.515" level="INFO">Clicking button '//button[@id='btn-reg-submitOnDesktop']'.</msg>
+<status status="PASS" starttime="20210801 22:47:54.514" endtime="20210801 22:47:54.674"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:54.478" endtime="20210801 22:47:54.674"/>
+</kw>
+<kw name="Verify Error Message" library="registration_page">
+<arg>${registrationPageLocator}[lblErrEegisterEmail]</arg>
+<arg>${error}[errRegisterEmail]</arg>
+<kw name="Verify Element is Visible" library="common_keywords">
+<arg>${locator}</arg>
+<arg>120</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210801 22:47:54.679" endtime="20210801 22:47:54.760"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210801 22:47:54.784" level="INFO">Element '//input[@name='email']/..//span[@color='danger']' is displayed.</msg>
+<status status="PASS" starttime="20210801 22:47:54.761" endtime="20210801 22:47:54.784"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:54.678" endtime="20210801 22:47:54.784"/>
+</kw>
+<kw name="Verify Element Text" library="common_keywords">
+<arg>${locator}</arg>
+<arg>${error}</arg>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210801 22:47:54.789" level="INFO">Verifying element '//input[@name='email']/..//span[@color='danger']' contains exact text 'Please enter a valid email address (Ex: mail@domain.com).'.</msg>
+<status status="PASS" starttime="20210801 22:47:54.786" endtime="20210801 22:47:54.816"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:54.785" endtime="20210801 22:47:54.817"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:54.676" endtime="20210801 22:47:54.817"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210801 22:47:54.818" endtime="20210801 22:47:57.162"/>
+</kw>
+<status status="PASS" starttime="20210801 22:47:40.603" endtime="20210801 22:47:57.164"/>
+</test>
+<status status="PASS" starttime="20210801 22:45:13.418" endtime="20210801 22:47:57.171"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Registration Functional">Registration Functional</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

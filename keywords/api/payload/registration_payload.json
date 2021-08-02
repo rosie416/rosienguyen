@@ -1,0 +1,18 @@
+{
+  "operationName": "register",
+  "variables": {
+    "input": {
+      "email": "ss@fmaa.ccc",
+      "password": "Hoa12345",
+      "firstname": "rwr",
+      "lastname": "rwr",
+      "storeId": 2,
+      "language": "en",
+      "accept_consents": [
+        "PRIVACY"
+      ]
+    },
+    "storeCode": "en" 
+  },
+  "query": "mutation register($input: RegisterInput!) {\n  register(input: $input) {\n    message\n  }\n}\n"
+}

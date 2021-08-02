@@ -1,0 +1,19 @@
+error:
+  errEmpty: 'This is a required field.'
+  errRegisterEmail: 'Please enter a valid email address (Ex: mail@domain.com).'
+  errCanNotCreateAccount: 'Can not create account please try again later.'
+
+confirmation:
+  account: 'Account'
+  logout: 'Logout'
+
+apiCode:
+  ok: '200'
+  badRequest: '400'
+
+apiMessage:
+  success: 'success'
+  errEmptyFirstName: '"First Name" is a required value.'
+  errInvalidEmail: '"Email" is not a valid email address.'
+  errExistedEmail: 'A customer with the same email address already exists in an associated website.'
+

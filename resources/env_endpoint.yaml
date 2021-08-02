@@ -1,0 +1,11 @@
+powerbuy:
+  homePageUrl: 'https://www.powerbuy.co.th/en'
+  registrationUrl: 'https://www.powerbuy.co.th/en/registration'
+  registrationSuccessUrl:  'https://www.powerbuy.co.th/en/registration/success'
+
+api:
+  base_url: 'https://coreapi-v2.powerbuy.co.th'
+  registrationPath: '/graphql'
+  
+browser: 'chrome'
+  
